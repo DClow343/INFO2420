@@ -35,12 +35,11 @@
 </style>
 
 <script language="JavaScript" type="text/javascript">
-<!-- Begin comment for older browsers
 
-	PrintButton1 = new Image
-	PrintButton2 = new Image
-	logo1 = new Image
-	logo2 = new Image
+	PrintButton1 = new Image();
+	PrintButton2 = new Image();
+	logo1 = new Image();
+	logo2 = new Image();
 if (document.images) {
 	PrintButton1.src = "Images/print1.jpg"
 	PrintButton2.src = "Images/print2.jpg"
@@ -49,23 +48,23 @@ if (document.images) {
 }
 
 
-		var imgArray = new Array(
+		var imgArray = new Array[
 			'Image1Lg.jpg',
 			'Image2Lg.jpg',
 			'Image3Lg.jpg',
 			'Image4Lg.jpg'
 			
 
-		);
+		];
 
 
-		var titleArray = new Array(
+		var titleArray = new Array[
 			'Chef Tasting Dish',
 			'Salad on Fork',
 			'Various Ingredients',
 			'Delicious Cake'
 			
-		);
+		];
 			
 		var imgPath = "Images/Fullsize/";
 		
@@ -81,8 +80,7 @@ if (document.images) {
 			theImage.src = imgPath + newImg;
 
 			textTitle=titleArray[imgID];
-
-      			textDiv.innerHTML = textTitle;
+      		textDiv.innerHTML = textTitle;
 		}
 			
 		function preloadImages() {		
@@ -90,8 +88,7 @@ if (document.images) {
 				var tmpImg = new Image;
 				tmpImg.src = imgPath + imgArray[i];
 			}
-		}
-// End comment for older browsers -->		
+		}	
 
 </script>
 
@@ -104,7 +101,7 @@ if (document.images) {
 
 <a href="" onmouseover="document.getElementById('print').src='Images/print2.jpg';"
 onmouseout="document.getElementById('print').src='Images/print1.jpg';">
-<img src="Images/Print1.jpg" alt="Print Page" width="200" height="50"
+<img src="Images/print1.jpg" alt="Print Page" width="200" height="50"
 id="print"></a>
 
 </div>
@@ -121,8 +118,6 @@ onmouseout="document.getElementById('logo').src='Images/Logo.jpg';">
 <br />
 <br />
 <br />
-
-<p class="instructions">
 
 <div id="thumbs">
 		<img src="Images/Thumbnails/Image1Sm.jpg" alt="Chef Tasting Dish" onmouseover="swapImage(0);" />
@@ -146,10 +141,6 @@ onmouseout="document.getElementById('logo').src='Images/Logo.jpg';">
 <br />
 <br />
 <br />
-
-
-
-</div>
 
 <p>
     <a href="http://validator.w3.org/check?uri=referer"><img
