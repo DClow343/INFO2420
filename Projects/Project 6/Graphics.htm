@@ -6,89 +6,92 @@
 
 <style type="text/css">
 #thumbs, #image {
-			width: 700px;
-			border: solid 1px #000;
-			text-align: center;
-			margin: 0 auto 0 auto;
-			color: #000;
-			background: #eee;
-			padding: 5px;
-		}
-		
+width: 700px;
+border: solid 1px #000;
+text-align: center;
+margin: 0 auto 0 auto;
+color: #000;
+background: #eee;
+padding: 5px;
+}
+
 #thumbs {
-		margin-top: 10px;
+margin-top: 10px;
 }
 
 #thumbs img {
-		border: solid 1px #000;
-		margin: 5px;
+border: solid 1px #000;
+margin: 5px;
 }
 
 #image{
-		height:400px;
+height:400px;
 }
 
 .instructions{
-		font-style:italic;
+font-style:italic;
 }
 
 </style>
 
 <script language="JavaScript" type="text/javascript">
+<!-- Begin comment for older browsers
 
-	PrintButton1 = new Image();
-	PrintButton2 = new Image();
-	logo1 = new Image();
-	logo2 = new Image();
+PrintButton1 = new Image
+PrintButton2 = new Image
+logo1 = new Image
+logo2 = new Image
 if (document.images) {
-	PrintButton1.src = "Images/Print1.jpg"
-	PrintButton2.src = "Images/Print2.jpg"
-	logo1.src = "Images/logo1.jpg"
-	logo2.src = "Images/logo2.jpg"
+PrintButton1.src = "Images/print1.jpg"
+PrintButton2.src = "Images/print2.jpg"
+logo1.src = "Images/logo1.jpg"
+logo2.src = "Images/logo2.jpg"
 }
 
 
-		var imgArray = new Array[
-			'Image1Lg.jpg',
-			'Image2Lg.jpg',
-			'Image3Lg.jpg',
-			'Image4Lg.jpg'
-			
-
-		];
+var imgArray = new Array(
+'Image1Lg.jpg',
+'Image2Lg.jpg',
+'Image3Lg.jpg',
+'Image4Lg.jpg'
 
 
-		var titleArray = new Array[
-			'Chef Tasting Dish',
-			'Salad on Fork',
-			'Various Ingredients',
-			'Delicious Cake'
-			
-		];
-			
-		var imgPath = "Images/Fullsize/";
-		
-		function swapImage(imgID) {
+);
 
-			var theImage = document.getElementById('theImage');
-			var textDiv = document.getElementById('bottomText');
 
-			var newImg;
-			var textTitle;
+var titleArray = new Array(
+'Chef Tasting Dish',
+'Salad on Fork',
+'Various Ingredients',
+'Delicious Cake'
 
-			newImg = imgArray[imgID];
-			theImage.src = imgPath + newImg;
+);
 
-			textTitle=titleArray[imgID];
-      		textDiv.innerHTML = textTitle;
-		}
-			
-		function preloadImages() {		
-			for(var i = 0; i < imgArray.length; i++) {
-				var tmpImg = new Image;
-				tmpImg.src = imgPath + imgArray[i];
-			}
-		}	
+var imgPath = "Images/Fullsize/";
+
+function swapImage(imgID) {
+
+var theImage = document.getElementById('theImage');
+var textDiv = document.getElementById('bottomText');
+
+var newImg;
+var textTitle;
+
+newImg = imgArray[imgID];
+theImage.src = imgPath + newImg;
+
+textTitle=titleArray[imgID];
+
+      textDiv.innerHTML = textTitle;
+}
+
+function preloadImages() {
+for(var i = 0; i < imgArray.length; i++) {
+var tmpImg = new Image;
+tmpImg.src = imgPath + imgArray[i];
+}
+}
+// End comment for older browsers -->
 
 </script>
 
@@ -99,8 +102,8 @@ if (document.images) {
 
 <div>
 
-<a href="" onmouseover="document.getElementById('print').src='Images/Print2.jpg';"
-onmouseout="document.getElementById('print').src='Images/Print1.jpg';">
+<a href="" onmouseover="document.getElementById('print').src='Images/print2.jpg';"
+onmouseout="document.getElementById('print').src='Images/print1.jpg';">
 <img src="Images/Print1.jpg" alt="Print Page" width="200" height="50"
 id="print"></a>
 
@@ -119,21 +122,23 @@ onmouseout="document.getElementById('logo').src='Images/Logo.jpg';">
 <br />
 <br />
 
+<p class="instructions">
+
 <div id="thumbs">
-		<img src="Images/Thumbnails/Image1Sm.jpg" alt="Chef Tasting Dish" onmouseover="swapImage(0);" />
-		<img src="Images/Thumbnails/Image2Sm.jpg" alt="Salad on Fork" onmouseover="swapImage(1);" />
-		<img src="Images/Thumbnails/Image3Sm.jpg" alt="Various Ingredients" onmouseover="swapImage(2);" />
-		<img src="Images/Thumbnails/Image4Sm.jpg" alt="Delicious Cake" onmouseover="swapImage(3);" />
-		
-		<br/>
+<img src="Images/Thumbnails/Image1Sm.jpg" alt="Chef Tasting Dish" onmouseover="swapImage(0);" />
+<img src="Images/Thumbnails/Image2Sm.jpg" alt="Salad on Fork" onmouseover="swapImage(1);" />
+<img src="Images/Thumbnails/Image3Sm.jpg" alt="Various Ingredients" onmouseover="swapImage(2);" />
+<img src="Images/Thumbnails/Image4Sm.jpg" alt="Delicious Cake" onmouseover="swapImage(3);" />
 
-</div>											
+<br/>
 
-	<div id="image">
+</div>
 
-		<img id="theImage" src="Images/FullSize/Image1Lg.jpg" alt="Dog doing trick" />
-		<h3 id="bottomText">Chef Tasting Dish</h3>
-	</div>
+<div id="image">
+
+<img id="theImage" src="Images/FullSize/Image1Lg.jpg" alt="Dog doing trick" />
+<h3 id="bottomText">Chef Tasting Dish</h3>
+</div>
 
 <img src="Images/2colback.jpg">
 
@@ -142,11 +147,15 @@ onmouseout="document.getElementById('logo').src='Images/Logo.jpg';">
 <br />
 <br />
 
+
+
+</div>
+
 <p>
     <a href="http://validator.w3.org/check?uri=referer"><img
       src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
 </p>
-  
+ 
 
 </body>
 </html>
